@@ -1,0 +1,303 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #e8b19d;
+    color: #ac1634;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Disable scrolling when the recipe popup is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Header Styles */
+header nav {
+    background-color: #f3e0d1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ac1634;
+}
+
+form button[type="submit"] {
+    background-color: #be6674;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+    background-color: #f1a2b0;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Recommended Dishes Section */
+.recommended-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.recommended-section h2 {
+    font-size: 28px;
+    color: #a1112e;
+    margin-bottom: 20px;
+}
+
+.recommended-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    place-items: center;
+}
+
+/* Recommended Dishes */
+.recommended {
+    background-color: #ac1634;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #8d0f28;
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.recommended:hover {
+    transform: scale(1.05);
+}
+
+.recommended img {
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.recommended h3 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+/* Hide recommended dishes when searching */
+.hidden {
+    display: none;
+}
+
+/* Recipe Container */
+.recipe-container {
+    text-align: center;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    padding: 20px;
+    place-items: center;
+}
+
+/* Recipe Cards */
+.recipe {
+    background-color: #ac1634;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #8d0f28;
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+}
+
+.recipe img {
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.recipe h3 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+/* View Recipe Button */
+.view-recipe-btn {
+    background-color: #f1a2b0;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view-recipe-btn:hover {
+    background-color: #d18496;
+}
+
+/* Recipe Details Popup */
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a1112e;
+    border-radius: 12px;
+    width: 40%;
+    max-width: 500px;
+    max-height: 80vh;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.recipe-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.recipe-close-btn:hover {
+    color: #f3e0d1;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode header nav {
+    background-color: #333;
+}
+
+.dark-mode .recommended,
+.dark-mode .recipe {
+    background-color: #444;
+    box-shadow: 0 5px 10px #222;
+}
+
+.dark-mode form button[type="submit"] {
+    background-color: #666;
+}
+
+.dark-mode form button[type="submit"]:hover {
+    background-color: #888;
+}
+
+.dark-mode .recipe-details {
+    background-color: #222;
+}
+
+/* 🌟 Landing Section */
+.landing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?food,cooking') center/cover no-repeat;
+    color: white;
+    padding: 40px;
+}
+
+/* Glassmorphism Effect */
+.glassmorph-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Weekly Recipe Card */
+.recipe-of-week {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #f3e0d1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weekly-recipe-card {
+    background-color: #ac1634;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px #8d0f28;
+}
+
+.weekly-recipe-card img {
+    border-radius: 8px;
+    height: 180px;
+    width: 100%;
+}
+
+.weekly-recipe-card h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}

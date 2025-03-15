@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe App</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Recipe App</h1>
+            <form>
+                <input type="text" placeholder="Search for recipes, locations, or ingredients" class="searchBox">
+                <button type="submit" class="searchBtn">Search</button>
+            </form>
+            <button id="theme-toggle">🌙</button> <!-- Fixed emoji button -->
+        </nav>
+    </header>
+    
+    <!-- 🌟 Landing Section with Glassmorphism -->
+    <section class="landing-section">
+        <div class="glassmorph-box">
+            <h1>Welcome to Recipe App 🍽️</h1>
+            <p>Discover, Cook, and Enjoy Delicious Recipes from Around the World! 🌍✨</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Recommended Dishes Section -->
+        <section class="recommended-section">
+            <h2>Recommended Dishes</h2>
+            <div class="recommended-container">
+                <!-- Recommended dishes will be inserted dynamically -->
+            </div>
+        </section>
+
+        <!-- Recipe Search Results -->
+        <section>
+            <div class="recipe-container">
+                <h2>Search Your Favorite Recipes</h2>
+            </div>
+
+            <!-- Recipe Details Popup -->
+            <div class="recipe-details">
+                <button type="button" class="recipe-close-btn">✖</button>
+                <div class="recipe-details-content"></div>
+            </div>
+        </section>
+
+        <!-- Recipe of the Week -->
+        <section class="recipe-of-week">
+            <h2>🌟 Recipe of the Week</h2>
+            <div id="weekly-recipe">
+                <p>Loading...</p>
+            </div>
+        </section>        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
